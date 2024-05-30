@@ -158,7 +158,7 @@ val_ex = val_data.drop(columns=['points'])
 
 
 # SARIMAX modelēšana
-model = SARIMAX(train_end, ex=train_ex, order=(p, d, q), seasonal_order=(P, D, Q, 7))
+model = SARIMAX(train_end, ex=train_ex, order=(p, d, q), seasonal_order=(P, D, Q, s))
 result = model.fit()
 
 # grafiskā diagnostika analīzei
